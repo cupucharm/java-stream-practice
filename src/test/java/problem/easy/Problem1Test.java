@@ -10,7 +10,7 @@ public class Problem1Test {
 
     @Test
     public void testFilterStrings() {
-        List<String> input = Arrays.asList("apple", "banana", "cherry", "fig");
+        List<String> input = Arrays.asList("apple", "banana", "cherry", "fig", "pear");
         List<String> expected = Arrays.asList("apple", "banana", "cherry");
         assertEquals(expected, Problem1.filterStrings(input));
     }
