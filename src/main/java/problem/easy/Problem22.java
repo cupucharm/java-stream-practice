@@ -1,6 +1,6 @@
 package problem.easy;
 
-import java.util.List;
+import java.util.*;
 
 public class Problem22 {
 
@@ -11,7 +11,6 @@ public class Problem22 {
      * @return 대문자로 변환된 문자열 리스트
      */
     public static List<String> convertToUpperCase(List<String> strings) {
-        // 여기에 코드 작성
-        return null;
+        return strings.stream().map(String::toUpperCase).toList();
     }
 }
