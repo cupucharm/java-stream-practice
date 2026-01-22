@@ -1,7 +1,7 @@
 package problem.easy;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Problem13 {
 
@@ -12,7 +12,11 @@ public class Problem13 {
      * @return 각 요소에 2를 곱한 새 Queue
      */
     public static Queue<Integer> doubleEach(Queue<Integer> numbers) {
-        // 여기에 코드 작성
-        return new LinkedList<>();
+        // 2026-01-21 어렵다 ~
+
+//        return numbers.stream().map(n -> n * 2).collect(Collectors.toCollection(ArrayDeque::new));
+//        return new LinkedList<>(numbers.stream().map(n -> n * 2).toList());
+        return numbers.stream().map(n -> n * 2)
+                .collect(Collectors.toCollection(LinkedList::new));
     }
 }

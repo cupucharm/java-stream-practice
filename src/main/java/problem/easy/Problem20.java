@@ -1,6 +1,7 @@
 package problem.easy;
 
-import java.util.Map;
+import java.util.*;
+import java.util.stream.*;
 
 public class Problem20 {
 
@@ -12,7 +13,13 @@ public class Problem20 {
      * @return 생성된 LinkedHashMap
      */
     public static Map<Integer, Integer> createLinkedHashMapFromStream(int[] numbers) {
-        // 여기에 코드 작성
-        return null;
+        return Arrays.stream(numbers)
+                .boxed()
+                .collect(Collectors.toMap(
+                        e -> e,
+                        e -> e * e,
+                        (oldVal, newVal) -> oldVal,
+                        LinkedHashMap::new
+                ));
     }
 }
